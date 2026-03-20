@@ -393,7 +393,7 @@ function App() {
   useEffect(() => {
     const date = getDate(dateOffset);
     setLoading(true);
-    fetch(`http://localhost:5000/api/availability/manikonda?date=${date}`)
+    fetch(`https://livecourt.onrender.com/api/availability/manikonda?date=${date}`)
       .then(res => res.json())
       .then(json => { setData(json); setLoading(false); })
       .catch(() => setLoading(false));
